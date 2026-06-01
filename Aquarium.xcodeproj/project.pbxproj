@@ -1,0 +1,421 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B0010000 /* AquariumApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010000 /* AquariumApp.swift */; };
+		B0020000 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0020000 /* AppModel.swift */; };
+		B0030000 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0030000 /* ContentView.swift */; };
+		B0040000 /* AquariumVolumeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0040000 /* AquariumVolumeView.swift */; };
+		B0050000 /* ImmersiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0050000 /* ImmersiveView.swift */; };
+		B0060000 /* CatalogSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0060000 /* CatalogSheet.swift */; };
+		B0070000 /* FishCatalogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0070000 /* FishCatalogView.swift */; };
+		B0080000 /* DecorationCatalogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0080000 /* DecorationCatalogView.swift */; };
+		B0090000 /* TankCustomizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0090000 /* TankCustomizationView.swift */; };
+		B0100000 /* FishSpecies.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0100000 /* FishSpecies.swift */; };
+		B0110000 /* DecorationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0110000 /* DecorationItem.swift */; };
+		B0120000 /* TankConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0120000 /* TankConfiguration.swift */; };
+		B0130000 /* AquariumStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0130000 /* AquariumStore.swift */; };
+		B0140000 /* FishComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0140000 /* FishComponent.swift */; };
+		B0150000 /* FishBehaviorSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0150000 /* FishBehaviorSystem.swift */; };
+		B0160000 /* FishEntityFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0160000 /* FishEntityFactory.swift */; };
+		B0170000 /* TankBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0170000 /* TankBuilder.swift */; };
+		B0180000 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0180000 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F0000000 /* Aquarium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aquarium.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0010000 /* AquariumApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AquariumApp.swift; sourceTree = "<group>"; };
+		F0020000 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		F0030000 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F0040000 /* AquariumVolumeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AquariumVolumeView.swift; sourceTree = "<group>"; };
+		F0050000 /* ImmersiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmersiveView.swift; sourceTree = "<group>"; };
+		F0060000 /* CatalogSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogSheet.swift; sourceTree = "<group>"; };
+		F0070000 /* FishCatalogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishCatalogView.swift; sourceTree = "<group>"; };
+		F0080000 /* DecorationCatalogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecorationCatalogView.swift; sourceTree = "<group>"; };
+		F0090000 /* TankCustomizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TankCustomizationView.swift; sourceTree = "<group>"; };
+		F0100000 /* FishSpecies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishSpecies.swift; sourceTree = "<group>"; };
+		F0110000 /* DecorationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecorationItem.swift; sourceTree = "<group>"; };
+		F0120000 /* TankConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TankConfiguration.swift; sourceTree = "<group>"; };
+		F0130000 /* AquariumStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AquariumStore.swift; sourceTree = "<group>"; };
+		F0140000 /* FishComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishComponent.swift; sourceTree = "<group>"; };
+		F0150000 /* FishBehaviorSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishBehaviorSystem.swift; sourceTree = "<group>"; };
+		F0160000 /* FishEntityFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishEntityFactory.swift; sourceTree = "<group>"; };
+		F0170000 /* TankBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TankBuilder.swift; sourceTree = "<group>"; };
+		F0180000 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F0190000 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0200000 /* Aquarium.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Aquarium.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		T0010000 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		G0000000 /* root */ = {
+			isa = PBXGroup;
+			children = (
+				G0100000 /* Aquarium */,
+				G0900000 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		G0900000 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F0000000 /* Aquarium.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		G0100000 /* Aquarium */ = {
+			isa = PBXGroup;
+			children = (
+				F0010000 /* AquariumApp.swift */,
+				F0020000 /* AppModel.swift */,
+				F0030000 /* ContentView.swift */,
+				G0200000 /* Views */,
+				G0300000 /* Models */,
+				G0400000 /* RealityKit */,
+				F0180000 /* Assets.xcassets */,
+				F0190000 /* Info.plist */,
+				F0200000 /* Aquarium.entitlements */,
+			);
+			path = Aquarium;
+			sourceTree = "<group>";
+		};
+		G0200000 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F0040000 /* AquariumVolumeView.swift */,
+				F0050000 /* ImmersiveView.swift */,
+				F0060000 /* CatalogSheet.swift */,
+				F0070000 /* FishCatalogView.swift */,
+				F0080000 /* DecorationCatalogView.swift */,
+				F0090000 /* TankCustomizationView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		G0300000 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F0100000 /* FishSpecies.swift */,
+				F0110000 /* DecorationItem.swift */,
+				F0120000 /* TankConfiguration.swift */,
+				F0130000 /* AquariumStore.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		G0400000 /* RealityKit */ = {
+			isa = PBXGroup;
+			children = (
+				F0140000 /* FishComponent.swift */,
+				F0150000 /* FishBehaviorSystem.swift */,
+				F0160000 /* FishEntityFactory.swift */,
+				F0170000 /* TankBuilder.swift */,
+			);
+			path = RealityKit;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		T0000000 /* Aquarium */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = XC000000 /* Build configuration list for PBXNativeTarget "Aquarium" */;
+			buildPhases = (
+				T0020000 /* Sources */,
+				T0010000 /* Frameworks */,
+				T0030000 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Aquarium;
+			productName = Aquarium;
+			productReference = F0000000 /* Aquarium.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		P0000000 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					T0000000 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = XC100000 /* Build configuration list for PBXProject "Aquarium" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = G0000000;
+			productRefGroup = G0900000 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				T0000000 /* Aquarium */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		T0030000 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0180000 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		T0020000 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0010000 /* AquariumApp.swift in Sources */,
+				B0020000 /* AppModel.swift in Sources */,
+				B0030000 /* ContentView.swift in Sources */,
+				B0040000 /* AquariumVolumeView.swift in Sources */,
+				B0050000 /* ImmersiveView.swift in Sources */,
+				B0060000 /* CatalogSheet.swift in Sources */,
+				B0070000 /* FishCatalogView.swift in Sources */,
+				B0080000 /* DecorationCatalogView.swift in Sources */,
+				B0090000 /* TankCustomizationView.swift in Sources */,
+				B0100000 /* FishSpecies.swift in Sources */,
+				B0110000 /* DecorationItem.swift in Sources */,
+				B0120000 /* TankConfiguration.swift in Sources */,
+				B0130000 /* AquariumStore.swift in Sources */,
+				B0140000 /* FishComponent.swift in Sources */,
+				B0150000 /* FishBehaviorSystem.swift in Sources */,
+				B0160000 /* FishEntityFactory.swift in Sources */,
+				B0170000 /* TankBuilder.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C0010000 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = xros;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C0020000 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_FAST_MATH = YES;
+				SDKROOT = xros;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C0030000 /* Debug (Target) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Aquarium/Aquarium.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Aquarium/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableDescription = "A virtual aquarium for Apple Vision Pro";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aquarium.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = xros;
+				SUPPORTED_PLATFORMS = xros;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 7;
+				XROS_DEPLOYMENT_TARGET = 1.0;
+			};
+			name = Debug;
+		};
+		C0040000 /* Release (Target) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Aquarium/Aquarium.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Aquarium/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableDescription = "A virtual aquarium for Apple Vision Pro";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aquarium.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = xros;
+				SUPPORTED_PLATFORMS = xros;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 7;
+				XROS_DEPLOYMENT_TARGET = 1.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		XC000000 /* Build configuration list for PBXNativeTarget "Aquarium" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0030000 /* Debug */,
+				C0040000 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		XC100000 /* Build configuration list for PBXProject "Aquarium" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0010000 /* Debug */,
+				C0020000 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = P0000000 /* Project object */;
+}
