@@ -9,7 +9,10 @@ struct AquariumApp: App {
         // Register ECS types before any scene loads
         FishComponent.registerComponent()
         TankBoundsComponent.registerComponent()
+        DecorationComponent.registerComponent()
+        FoodComponent.registerComponent()
         FishBehaviorSystem.registerSystem()
+        FoodSystem.registerSystem()
     }
 
     var body: some Scene {

@@ -24,6 +24,9 @@ final class AppModel {
     // Tracks which fish instance entities are live in the scene
     var liveEntityIDs: [UUID: Entity] = [:]
 
+    // Tracks which decoration instance entities are live in the scene
+    var liveDecorationIDs: [UUID: Entity] = [:]
+
     enum CatalogTab: String, CaseIterable {
         case fish, decorations, themes
     }

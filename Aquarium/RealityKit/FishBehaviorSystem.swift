@@ -43,20 +43,24 @@ final class FishBehaviorSystem: System {
             // 1. Increment swim phase for body oscillation
             comp.swimPhase += dt * Self.swimPhaseRate * (comp.swimSpeed / 0.08)
 
+            // Feeding fish swim faster and ignore schooling/wander so they
+            // can dart straight to the pellet FoodSystem assigned them.
+            let speed = comp.isFeeding ? comp.swimSpeed * 2.2 : comp.swimSpeed
+
             // 2. Pick a new wander target when the timer expires or we are close
             comp.wanderTimer -= dt
             let distToTarget = simd_length(comp.targetPosition - entity.position)
 
-            if comp.wanderTimer <= 0 || distToTarget < 0.04 {
+            if !comp.isFeeding, comp.wanderTimer <= 0 || distToTarget < 0.04 {
                 comp.targetPosition = randomTarget(comp: comp, bounds: bounds)
                 comp.wanderTimer = Self.wanderInterval + Float.random(in: -1.0...1.0)
             }
 
             // 3. Build steering force
-            var steering = simd_normalize(comp.targetPosition - entity.position) * comp.swimSpeed
+            var steering = simd_normalize(comp.targetPosition - entity.position) * speed
 
-            // Apply boids forces only for schooling/peaceful fish
-            if comp.behaviorType == .schooling || comp.behaviorType == .peaceful {
+            // Apply boids forces only for schooling/peaceful fish that aren't feeding
+            if !comp.isFeeding, comp.behaviorType == .schooling || comp.behaviorType == .peaceful {
                 let boidsForce = computeBoids(entity: entity, comp: comp, allFish: allFish)
                 steering += boidsForce
             }
@@ -76,8 +80,9 @@ final class FishBehaviorSystem: System {
             }
 
             // 6. Smooth velocity toward the steering direction
-            let targetVel = simd_normalize(simd_length(steering) > 0.001 ? steering : comp.velocity) * comp.swimSpeed
-            comp.velocity = simd_mix(comp.velocity, targetVel, t: min(dt * 2.5, 1.0))
+            let targetVel = simd_normalize(simd_length(steering) > 0.001 ? steering : comp.velocity) * speed
+            let blend = comp.isFeeding ? min(dt * 4.0, 1.0) : min(dt * 2.5, 1.0)
+            comp.velocity = simd_mix(comp.velocity, targetVel, t: blend)
 
             // 7. Integrate position
             var newPos = entity.position + comp.velocity * dt

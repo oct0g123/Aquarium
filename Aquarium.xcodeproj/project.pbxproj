@@ -25,6 +25,11 @@
 		B0160000 /* FishEntityFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0160000 /* FishEntityFactory.swift */; };
 		B0170000 /* TankBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0170000 /* TankBuilder.swift */; };
 		B0180000 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0180000 /* Assets.xcassets */; };
+		B0190000 /* DecorationEntityFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0210000 /* DecorationEntityFactory.swift */; };
+		B0200000 /* BubbleEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0220000 /* BubbleEmitter.swift */; };
+		B0210000 /* AquariumAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0230000 /* AquariumAudio.swift */; };
+		B0220000 /* FoodSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0240000 /* FoodSystem.swift */; };
+		B0230000 /* FishInfoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0250000 /* FishInfoCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +54,11 @@
 		F0180000 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F0190000 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0200000 /* Aquarium.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Aquarium.entitlements; sourceTree = "<group>"; };
+		F0210000 /* DecorationEntityFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecorationEntityFactory.swift; sourceTree = "<group>"; };
+		F0220000 /* BubbleEmitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleEmitter.swift; sourceTree = "<group>"; };
+		F0230000 /* AquariumAudio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AquariumAudio.swift; sourceTree = "<group>"; };
+		F0240000 /* FoodSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSystem.swift; sourceTree = "<group>"; };
+		F0250000 /* FishInfoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishInfoCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +113,7 @@
 				F0070000 /* FishCatalogView.swift */,
 				F0080000 /* DecorationCatalogView.swift */,
 				F0090000 /* TankCustomizationView.swift */,
+				F0250000 /* FishInfoCard.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -125,6 +136,10 @@
 				F0150000 /* FishBehaviorSystem.swift */,
 				F0160000 /* FishEntityFactory.swift */,
 				F0170000 /* TankBuilder.swift */,
+				F0210000 /* DecorationEntityFactory.swift */,
+				F0220000 /* BubbleEmitter.swift */,
+				F0230000 /* AquariumAudio.swift */,
+				F0240000 /* FoodSystem.swift */,
 			);
 			path = RealityKit;
 			sourceTree = "<group>";
@@ -215,6 +230,11 @@
 				B0150000 /* FishBehaviorSystem.swift in Sources */,
 				B0160000 /* FishEntityFactory.swift in Sources */,
 				B0170000 /* TankBuilder.swift in Sources */,
+				B0190000 /* DecorationEntityFactory.swift in Sources */,
+				B0200000 /* BubbleEmitter.swift in Sources */,
+				B0210000 /* AquariumAudio.swift in Sources */,
+				B0220000 /* FoodSystem.swift in Sources */,
+				B0230000 /* FishInfoCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

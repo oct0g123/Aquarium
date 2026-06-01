@@ -21,6 +21,10 @@ struct FishComponent: Component, Codable {
     var wanderTimer: Float = 0       // time until next wander target
     var preferredSchoolSize: Int = 1
 
+    // Gameification: set by FoodSystem when chasing a pellet. When true the
+    // behavior system suppresses boids/wander forces and boosts speed.
+    var isFeeding: Bool = false
+
     // Depth preference encoded as normalized Y range [0, 1] within tank
     var depthMin: Float = 0.2
     var depthMax: Float = 0.8

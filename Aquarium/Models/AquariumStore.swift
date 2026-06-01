@@ -52,11 +52,46 @@ struct DecorationInstance: Identifiable, Codable, Equatable {
     }
 }
 
+// Lightweight gameification state. Kept cosmetic for now (the zen baseline),
+// but structured so a fuller care loop can build on it later.
+struct TankStats: Codable, Equatable {
+    var timesFed: Int = 0
+    var lastFedAt: Date? = nil
+
+    // Happiness drifts up when fed recently, decays slowly otherwise.
+    // Range 0...1. Purely informational today — no penalties.
+    var happiness: Double = 1.0
+
+    mutating func recordFeeding(now: Date = .now) {
+        timesFed += 1
+        lastFedAt = now
+        happiness = min(1.0, happiness + 0.15)
+    }
+
+    /// Recomputes happiness based on time since last feeding.
+    mutating func refresh(now: Date = .now) {
+        guard let last = lastFedAt else { return }
+        let hours = now.timeIntervalSince(last) / 3600
+        // Gentle decay: ~0.02 per hour, floored so fish never look miserable.
+        happiness = max(0.5, min(1.0, 1.0 - hours * 0.02 + 0.0))
+    }
+
+    var moodLabel: String {
+        switch happiness {
+        case 0.85...:    return "Thriving"
+        case 0.7..<0.85: return "Happy"
+        case 0.6..<0.7:  return "Content"
+        default:         return "Peckish"
+        }
+    }
+}
+
 // Serializable snapshot of the full aquarium state
 struct AquariumSave: Codable {
     var tankConfig: TankConfiguration
     var fish: [FishInstance]
     var decorations: [DecorationInstance]
+    var stats: TankStats?
 }
 
 // MARK: - AquariumStore
@@ -65,10 +100,20 @@ final class AquariumStore {
     var tankConfig: TankConfiguration = .init()
     var fish: [FishInstance] = []
     var decorations: [DecorationInstance] = []
+    var stats: TankStats = .init()
 
     private let saveKey = "aquarium_save_v1"
 
-    init() { load() }
+    init() {
+        load()
+        stats.refresh()
+    }
+
+    // MARK: Feeding (gameification)
+    func recordFeeding() {
+        stats.recordFeeding()
+        save()
+    }
 
     // MARK: Fish
     func addFish(speciesID: String) {
@@ -114,7 +159,7 @@ final class AquariumStore {
 
     // MARK: Persistence
     func save() {
-        let snapshot = AquariumSave(tankConfig: tankConfig, fish: fish, decorations: decorations)
+        let snapshot = AquariumSave(tankConfig: tankConfig, fish: fish, decorations: decorations, stats: stats)
         if let data = try? JSONEncoder().encode(snapshot) {
             UserDefaults.standard.set(data, forKey: saveKey)
         }
@@ -129,6 +174,7 @@ final class AquariumStore {
         tankConfig = snapshot.tankConfig
         fish = snapshot.fish
         decorations = snapshot.decorations
+        stats = snapshot.stats ?? .init()
     }
 
     private func seedDefaults() {
