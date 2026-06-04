@@ -88,7 +88,8 @@ final class FishBehaviorSystem: System {
             // 6. Smooth velocity toward the steering direction
             let targetVel = simd_normalize(simd_length(steering) > 0.001 ? steering : comp.velocity) * speed
             let blend = comp.isFeeding ? min(dt * 4.0, 1.0) : min(dt * 2.5, 1.0)
-            comp.velocity = simd_mix(comp.velocity, targetVel, t: blend)
+            // Lerp toward the target velocity (scalar blend → vector result).
+            comp.velocity += (targetVel - comp.velocity) * blend
 
             // 7. Integrate position
             var newPos = entity.position + comp.velocity * dt
