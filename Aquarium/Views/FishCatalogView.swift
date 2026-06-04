@@ -31,7 +31,7 @@ struct FishCatalogView: View {
             HStack {
                 Label(appModel.fishCountLabel, systemImage: "fish.fill")
                     .font(.caption)
-                    .foregroundStyle(appModel.canAddMoreFish ? .secondary : .red)
+                    .foregroundStyle(appModel.canAddMoreFish ? Color.secondary : Color.red)
                 Spacer()
                 if !appModel.canAddMoreFish {
                     Text("Tank is full — upgrade size in Theme tab")
@@ -72,7 +72,7 @@ struct FishCatalogView: View {
                 .padding(.vertical, 6)
                 .background(filterTheme == theme ? Color.accentColor : Color.secondary.opacity(0.15),
                             in: Capsule())
-                .foregroundStyle(filterTheme == theme ? .white : .primary)
+                .foregroundStyle(filterTheme == theme ? Color.white : Color.primary)
         }
         .buttonStyle(.plain)
     }

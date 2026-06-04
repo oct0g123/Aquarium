@@ -106,7 +106,7 @@ struct TankCustomizationView: View {
 
                 if draftConfig.theme == theme {
                     Image(systemName: "checkmark.circle.fill")
-                        .foregroundStyle(.accentColor)
+                        .foregroundStyle(Color.accentColor)
                 }
             }
         }
@@ -135,7 +135,7 @@ struct TankCustomizationView: View {
 
                 if draftConfig.lighting == mode {
                     Image(systemName: "checkmark.circle.fill")
-                        .foregroundStyle(.accentColor)
+                        .foregroundStyle(Color.accentColor)
                 }
             }
         }

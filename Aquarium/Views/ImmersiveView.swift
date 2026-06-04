@@ -16,7 +16,6 @@ struct ImmersiveView: View {
             content.add(makeOceanFloor())
 
             // Spawn full-scale fish that drift around the user
-            let config = appModel.store.tankConfig
             let speciesSet = Set(appModel.store.fish.compactMap(\.species))
             for species in speciesSet {
                 let count = max(1, appModel.store.fish.filter { $0.speciesID == species.id }.count)

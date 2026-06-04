@@ -47,7 +47,7 @@ struct DecorationCatalogView: View {
                 .padding(.horizontal, 12)
                 .padding(.vertical, 6)
                 .background(selectedCategory == category ? Color.accentColor : Color.secondary.opacity(0.15), in: Capsule())
-                .foregroundStyle(selectedCategory == category ? .white : .primary)
+                .foregroundStyle(selectedCategory == category ? Color.white : Color.primary)
         }
         .buttonStyle(.plain)
     }
