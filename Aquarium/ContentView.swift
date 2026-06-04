@@ -50,7 +50,7 @@ struct ContentView: View {
             Image(systemName: "fish.fill")
                 .font(.system(size: 40))
                 .foregroundStyle(appModel.store.tankConfig.theme.swiftUIColor)
-                .symbolEffect(.breathe)
+                .symbolEffect(.pulse)   // .breathe requires visionOS 2.0; .pulse works on 1.0+
             Text("Virtual Aquarium")
                 .font(.largeTitle.bold())
             Text("Your personal window into the deep")
