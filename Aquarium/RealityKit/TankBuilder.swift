@@ -154,7 +154,7 @@ enum TankBuilder {
         mat.baseColor = .init(tint: UIColor(red: CGFloat(wc.x), green: CGFloat(wc.y), blue: CGFloat(wc.z), alpha: 1))
         mat.roughness = .init(floatLiteral: 0.05)
         mat.metallic  = .init(floatLiteral: 0.0)
-        mat.blending  = .transparent(opacity: .init(floatLiteral: Double(wc.w)))
+        mat.blending  = .transparent(opacity: .init(floatLiteral: wc.w))
 
         let entity = ModelEntity(mesh: mesh, materials: [mat])
         entity.name = "water"
@@ -222,7 +222,7 @@ enum TankBuilder {
         var mat = PhysicallyBasedMaterial()
         mat.baseColor = .init(tint: UIColor(red: CGFloat(wc.x), green: CGFloat(wc.y), blue: CGFloat(wc.z), alpha: 1))
         mat.roughness = .init(floatLiteral: 0.05)
-        mat.blending  = .transparent(opacity: .init(floatLiteral: Double(wc.w)))
+        mat.blending  = .transparent(opacity: .init(floatLiteral: wc.w))
         water.model?.materials = [mat]
     }
 }
