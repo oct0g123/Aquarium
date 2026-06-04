@@ -15,7 +15,8 @@ struct AquariumApp: App {
         FoodSystem.registerSystem()
     }
 
-    var body: some Scene {
+    // Disambiguate from RealityKit.Scene (both modules define `Scene`).
+    var body: some SwiftUI.Scene {
         // Main hub window
         WindowGroup(id: "main") {
             ContentView()

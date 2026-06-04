@@ -34,10 +34,16 @@ final class FishBehaviorSystem: System {
             }
         }
 
-        // Find the tank bounds (may be absent in immersive space)
+        // Find the tank bounds (may be absent in immersive space).
+        // QueryResult is a Sequence, not a Collection, so iterate for the first.
         let boundsQuery = EntityQuery(where: .has(TankBoundsComponent.self))
-        let bounds: TankBoundsComponent? = context.scene.performQuery(boundsQuery).first?
-            .components[TankBoundsComponent.self]
+        var bounds: TankBoundsComponent?
+        for boundsEntity in context.scene.performQuery(boundsQuery) {
+            if let b = boundsEntity.components[TankBoundsComponent.self] {
+                bounds = b
+                break
+            }
+        }
 
         for (entity, var comp) in allFish {
             // 1. Increment swim phase for body oscillation

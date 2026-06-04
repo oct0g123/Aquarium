@@ -25,10 +25,17 @@ final class FoodSystem: System {
         let dt = Float(context.deltaTime)
         guard dt > 0, dt < 0.2 else { return }
 
-        // Tank floor (so pellets settle instead of falling forever)
+        // Tank floor (so pellets settle instead of falling forever).
+        // QueryResult is a Sequence (not a Collection), so iterate to read the
+        // first match rather than using `.first`.
         let boundsQuery = EntityQuery(where: .has(TankBoundsComponent.self))
-        let floorY = context.scene.performQuery(boundsQuery).first?
-            .components[TankBoundsComponent.self]?.floorY ?? -0.2
+        var floorY: Float = -0.2
+        for boundsEntity in context.scene.performQuery(boundsQuery) {
+            if let bounds = boundsEntity.components[TankBoundsComponent.self] {
+                floorY = bounds.floorY
+                break
+            }
+        }
 
         // Gather pellets
         var pellets: [(entity: Entity, comp: FoodComponent)] = []
