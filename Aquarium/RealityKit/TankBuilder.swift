@@ -1,5 +1,6 @@
 import RealityKit
 import Foundation
+import UIKit
 
 // MARK: - Tank Builder
 // Constructs the full tank entity hierarchy: glass walls, substrate,

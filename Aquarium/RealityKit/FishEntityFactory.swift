@@ -1,5 +1,6 @@
 import RealityKit
 import Foundation
+import UIKit
 
 // MARK: - Fish Entity Factory
 // Creates RealityKit entities for each fish species using procedural geometry.

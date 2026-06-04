@@ -1,5 +1,6 @@
 import RealityKit
 import Foundation
+import UIKit
 
 // MARK: - Food Pellet Component & System
 // The first gameification hook: tapping "Feed" drops pellets into the tank.
