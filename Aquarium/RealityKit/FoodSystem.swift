@@ -77,9 +77,13 @@ final class FoodSystem: System {
             }
 
             guard let target = nearest else {
-                // Not chasing food this frame — clear any food target flag
+                // No food in range — return to idle immediately.
+                // Resetting wanderTimer=0 forces the behavior system to pick a
+                // fresh wander target this frame instead of orbiting the last
+                // known food position.
                 if fish.isFeeding {
                     fish.isFeeding = false
+                    fish.wanderTimer = 0
                     fishEntity.components[FishComponent.self] = fish
                 }
                 continue

@@ -30,6 +30,7 @@
 		B0210000 /* AquariumAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0230000 /* AquariumAudio.swift */; };
 		B0220000 /* FoodSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0240000 /* FoodSystem.swift */; };
 		B0230000 /* FishInfoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0250000 /* FishInfoCard.swift */; };
+		B0240000 /* DecorationInfoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0260000 /* DecorationInfoCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		F0230000 /* AquariumAudio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AquariumAudio.swift; sourceTree = "<group>"; };
 		F0240000 /* FoodSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSystem.swift; sourceTree = "<group>"; };
 		F0250000 /* FishInfoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishInfoCard.swift; sourceTree = "<group>"; };
+		F0260000 /* DecorationInfoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecorationInfoCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				F0080000 /* DecorationCatalogView.swift */,
 				F0090000 /* TankCustomizationView.swift */,
 				F0250000 /* FishInfoCard.swift */,
+				F0260000 /* DecorationInfoCard.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				B0210000 /* AquariumAudio.swift in Sources */,
 				B0220000 /* FoodSystem.swift in Sources */,
 				B0230000 /* FishInfoCard.swift in Sources */,
+				B0240000 /* DecorationInfoCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,6 +6,7 @@ import RealityKit
 struct ContentView: View {
     @Environment(AppModel.self) private var appModel
     @Environment(\.openWindow) private var openWindow
+    @Environment(\.dismissWindow) private var dismissWindow
     @Environment(\.openImmersiveSpace) private var openImmersiveSpace
     @Environment(\.dismissImmersiveSpace) private var dismissImmersiveSpace
 
@@ -104,16 +105,24 @@ struct ContentView: View {
                     }
                 )
 
-            // Open tank button
+            // Open tank button — toggles to avoid opening multiple volumes
             Button {
-                openWindow(id: "aquarium-volume")
+                if appModel.volumeIsOpen {
+                    dismissWindow(id: "aquarium-volume")
+                } else {
+                    openWindow(id: "aquarium-volume")
+                    appModel.volumeIsOpen = true
+                }
             } label: {
-                Label("Open Tank", systemImage: "play.circle.fill")
-                    .font(.headline)
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical, 14)
-                    .background(Color.accentColor, in: RoundedRectangle(cornerRadius: 14))
-                    .foregroundStyle(.white)
+                Label(
+                    appModel.volumeIsOpen ? "Close Tank" : "Open Tank",
+                    systemImage: appModel.volumeIsOpen ? "xmark.circle.fill" : "play.circle.fill"
+                )
+                .font(.headline)
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 14)
+                .background(Color.accentColor, in: RoundedRectangle(cornerRadius: 14))
+                .foregroundStyle(.white)
             }
             .buttonStyle(.plain)
 
